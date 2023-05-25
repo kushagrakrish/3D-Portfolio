@@ -18,6 +18,10 @@
   padding-bottom: 100px;
   display: block;
 }
+.purple-toast {
+  background: #804dee;
+  color: white;
+}
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */
