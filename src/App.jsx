@@ -10,9 +10,9 @@ import {
   Feedbacks,
   Hero,
   Navbar,
+  StarsCanvas,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
 
 const App = () => {
@@ -20,18 +20,7 @@ const App = () => {
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <ToastContainer
-            position='top-left'
-            autoClose={2000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme='dark'
-          />
+          <ToastContainer />
           <Navbar />
           <Hero />
         </div>

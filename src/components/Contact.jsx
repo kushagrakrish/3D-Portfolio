@@ -26,7 +26,7 @@ const Contact = () => {
     setloading(true);
     emailjs
       .send(
-        "service_3yhjfv3s",
+        "service_3yhjfv3",
         "template_otvpnl9",
         {
           form_name: form.name,
@@ -40,17 +40,22 @@ const Contact = () => {
       .then(
         () => {
           setloading(false);
-          toast("Thank you. I will get back to you as soon as possible", {
-            position: "top-right",
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            className: "purple-toast", // CSS class for purple color
-            transition: "slide",
-            autoClose: 3000, // Close after 3 seconds
-          });
+          const successToast = toast.success(
+            "Thank You! Will get back to you soon.",
+            {
+              position: "top-left",
+              autoClose: 2000, // Close after 2 seconds
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: 1,
+              theme: "dark",
+            }
+          );
+          setTimeout(() => {
+            toast.dismiss(successToast);
+          }, 3000); // Dismiss after 2 seconds
           setForm({
             name: "",
             email: "",
@@ -60,9 +65,9 @@ const Contact = () => {
         (error) => {
           setloading(false);
           console.log(error);
-          toast("Sorry Something went wrong", {
+          const errorToast = toast.error("Sorry, something went wrong", {
             position: "top-left",
-            autoClose: 2000,
+            autoClose: 2000, // Close after 2 seconds
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -70,6 +75,9 @@ const Contact = () => {
             progress: 1,
             theme: "dark",
           });
+          setTimeout(() => {
+            toast.dismiss(errorToast);
+          }, 3000); // Dismiss after 2 seconds
         }
       );
   };
