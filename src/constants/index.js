@@ -1,34 +1,29 @@
 import {
-  mobile,
   backend,
   creator,
-  web,
-  javascript,
-  typescript,
-  html,
   css,
+  figma,
+  git,
+  html,
+  javascript,
+  mobile,
+  mongodb,
+  nodejs,
   reactjs,
   redux,
   tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  tripguide,
+  typescript,
+  web,
 } from "../assets";
-import incentiv from "../assets/incentiv.svg";
-import sparks from "../assets/sparks.png";
+import Dashboard from "../assets/dashboard.png";
 import DP from "../assets/dp.jpg";
-import VoidHack from "../assets/vhlogo.png";
+import incentiv from "../assets/incentiv.svg";
 import ReactQuery from "../assets/react-query.svg";
+import sparks from "../assets/sparks.png";
+import VoidHack from "../assets/vhlogo.png";
+import Workout from "../assets/workout.jpeg";
 
 export const navLinks = [
   {
@@ -201,9 +196,31 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Admin Dashboard",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "This Admin Panel includes one Dashboard, Three Pages, Four Apps, and Seven fully functional charts and it is entirely mobile responsive!It has an E-commerce page and calendar.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Dashboard,
+    source_code_link: "https://github.com/kushagrakrish/admin-dashboard",
+    deployed_link: "https://admin-dashhboard-2.netlify.app/",
+  },
+  {
+    name: "Workout Recommendation",
+    description:
+      "A fully responsive website that recommends the workout to the ueser regarding every muscle group.",
     tags: [
       {
         name: "react",
@@ -217,51 +234,37 @@ const projects = [
         name: "tailwind",
         color: "pink-text-gradient",
       },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "nodejs",
+        color: "blue",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: Workout,
+    source_code_link: "https://github.com/kushagrakrish/major-workout-app",
+    deployed_link: "",
   },
+
   {
-    name: "Trip Guide",
+    name: "Rental Website",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A website connects people who want to rent out their homes with people who are looking for accommodations in specific locales.Website has Google Authentication that stores all the data in Firebase.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Google firebase",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/kushagrakrish/minor-rentEasy",
+    deployed_link: "",
   },
 ];
 

@@ -16,6 +16,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  deployed_link,
 }) => {
   return (
     <>
@@ -47,7 +48,7 @@ const ProjectCard = ({
               </div>
               {/* Use this div to add the Deployed link of the project */}
               <div
-                onClick={() => window.open(source_code_link, "_blank")}
+                onClick={() => window.open(deployed_link, "_blank")}
                 className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
               >
                 <img

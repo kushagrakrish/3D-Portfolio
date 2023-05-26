@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import Typewriter from "./Typewriter";
 const Hero = () => {
   return (
     <section className='relative w-full h-screen mx-auto'>
@@ -13,20 +14,24 @@ const Hero = () => {
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Kushagra</span>
+          <h1
+            className={`font-black text-white lg:text-[50px] md:text-[50px] sm:text-[60px] xs:text-[50px] text-[30px] mt-2`}
+          >
+            Hi, I'm <span className='text-[#915EFF] ml-2'> Kushagra</span>
+            <br className='sm:block hidden' />
+            <Typewriter />
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText}text-white-100`}>
             I develop 3D visuals, user <br className='sm:block hidden' />
             interfaces and web applications
           </p>
         </div>
       </div>
       <ComputersCanvas />
-      <div className='absolute xs:bottom-0 bottom-32 w-full flex justify-center items-center'>
+      <div className='absolute xs:bottom-0 bottom-2 w-full flex justify-center items-center'>
         {/* Mouse scroll animation yb framer */}
         <a href='#about'>
-          <div className='w-8 h-16 rounded-3xl border-2 border-secondary flex items-center justify-start p-2'>
+          <div className='w-8 h-[52px] rounded-3xl border-2 border-secondary flex items-center justify-start p-2'>
             <motion.div
               animate={{
                 y: [0, 25, 0],
