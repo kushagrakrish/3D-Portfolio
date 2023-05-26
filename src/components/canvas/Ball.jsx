@@ -7,7 +7,6 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense } from "react";
-
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
@@ -16,18 +15,50 @@ const Ball = (props) => {
     <Float speed={1.75} rotationIntensity={1}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
+      <mesh castShadow receiveShadow scale={3.65}>
+        <boxGeometry args={[1, 1, 1]} />{" "}
+        {/* Use boxGeometry instead of icosahedronGeometry */}
         <meshStandardMaterial
           color='#fff8eb'
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
         />
+        {/* Apply the decal to each face of the cube */}
         <Decal
-          position={[0, 0, 1]}
+          position={[0, 0, 0]}
           map={decal}
-          rotation={[2 * Math.PI, 0, 6.25]}
+          rotation={[0, 0, 0]}
+          flatShading
+        />
+        <Decal
+          position={[0, 0, 0]}
+          map={decal}
+          rotation={[0, Math.PI / 2, 0]}
+          flatShading
+        />
+        <Decal
+          position={[0, 0, 0]}
+          map={decal}
+          rotation={[0, Math.PI, 0]}
+          flatShading
+        />
+        <Decal
+          position={[0, 0, 0]}
+          map={decal}
+          rotation={[0, -Math.PI / 2, 0]}
+          flatShading
+        />
+        <Decal
+          position={[0, 0, 0]}
+          map={decal}
+          rotation={[Math.PI / 2, 0, 0]}
+          flatShading
+        />
+        <Decal
+          position={[0, 0, 0]}
+          map={decal}
+          rotation={[-Math.PI / 2, 0, 0]}
           flatShading
         />
       </mesh>
