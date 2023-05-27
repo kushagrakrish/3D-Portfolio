@@ -4,6 +4,7 @@ import {
   css,
   figma,
   git,
+  github,
   html,
   javascript,
   mobile,
@@ -24,6 +25,8 @@ import ReactQuery from "../assets/react-query.svg";
 import sparks from "../assets/sparks.png";
 import VoidHack from "../assets/vhlogo.png";
 import Workout from "../assets/workout.jpeg";
+import ig from "../assets/ig.svg";
+import linkedin from "../assets/linkedin.svg";
 
 export const navLinks = [
   {
@@ -268,4 +271,19 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const footer = [
+  {
+    icon: ig,
+    link: "https://www.instagram.com/kushhhagrakrish/?hl=en",
+  },
+  {
+    icon: linkedin,
+    link: "https://www.linkedin.com/in/kushagra-krishna-69b22a179/",
+  },
+  {
+    icon: github,
+    link: "https://github.com/kushagrakrish",
+  },
+];
+
+export { services, technologies, experiences, testimonials, projects, footer };
